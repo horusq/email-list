@@ -33,10 +33,10 @@ app.post("/", function(req, res){
   };
   const jsonData = JSON.stringify(data);
 
-  const url="https://us21.api.mailchimp.com/3.0/lists/c39c962791";
+  const url="https://*server-id*.api.mailchimp.com/3.0/lists/list-id";
   const options = {
     method:"POST",
-    auth:"horus:d98b2cc1dff71f24ef873b1e18239e83-us21",
+    auth:"horus:api-key",
   }
   const request = https.request(url, options, function(response){
     if (response.statusCode===200){
@@ -63,5 +63,3 @@ app.listen(3000, function(){
 
 
 
-// apiKey = d98b2cc1dff71f24ef873b1e18239e83-us21
-//listId = c39c962791
